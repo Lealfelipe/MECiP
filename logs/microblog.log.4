@@ -1,0 +1,123 @@
+2022-09-23 21:49:50,652 ERROR: Exception on /login [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\app\routes.py", line 73, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
+    return _render(
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\cce\project\microblog\app\templates\login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "C:\Users\cce\project\microblog\app\templates\login.html", line 8, in block 'app_content'
+    {{ form.username.label }}<br>
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 436, in __html__
+    return self()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\wtforms\fields\core.py", line 445, in __call__
+    text = escape(text or self.text)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 66, in __html__
+    return str(self)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 21, in __str__
+    return str(self._func(*self._args, **self._kwargs))
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 689, in gettext
+    return get_domain().gettext(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 586, in gettext
+    t = self.get_translations()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 554, in get_translations
+    locale = get_locale()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 230, in get_locale
+    locale = Locale.parse(rv)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 267, in parse
+    parts = parse_locale(identifier, sep=sep)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 1099, in parse_locale
+    raise ValueError('expected only letters, got %r' % lang)
+ValueError: expected only letters, got 'pt-br'
+2022-09-23 21:49:52,978 ERROR: Exception on /explore [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 180, in unauthorized
+    if self.login_message:
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 24, in __len__
+    return len(str(self))
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 21, in __str__
+    return str(self._func(*self._args, **self._kwargs))
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 689, in gettext
+    return get_domain().gettext(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 586, in gettext
+    t = self.get_translations()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 554, in get_translations
+    locale = get_locale()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 230, in get_locale
+    locale = Locale.parse(rv)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 267, in parse
+    parts = parse_locale(identifier, sep=sep)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 1099, in parse_locale
+    raise ValueError('expected only letters, got %r' % lang)
+ValueError: expected only letters, got 'pt-br'
+2022-09-23 22:10:19,411 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:54]
+2022-09-23 22:11:16,591 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:54]
+2022-09-23 22:11:52,277 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:54]
+2022-09-23 22:12:50,944 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:54]
+2022-09-23 22:12:53,465 ERROR: Exception on / [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 180, in unauthorized
+    if self.login_message:
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 24, in __len__
+    return len(str(self))
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\speaklater.py", line 21, in __str__
+    return str(self._func(*self._args, **self._kwargs))
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 689, in gettext
+    return get_domain().gettext(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 586, in gettext
+    t = self.get_translations()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 554, in get_translations
+    locale = get_locale()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 230, in get_locale
+    locale = Locale.parse(rv)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 267, in parse
+    parts = parse_locale(identifier, sep=sep)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\babel\core.py", line 1099, in parse_locale
+    raise ValueError('expected only letters, got %r' % lang)
+ValueError: expected only letters, got 'pt-br'

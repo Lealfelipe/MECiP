@@ -1,0 +1,125 @@
+2022-09-23 20:05:44,777 ERROR: Exception on /user/Felipe [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\app\routes.py", line 132, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
+    return _render(
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\cce\project\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "C:\Users\cce\project\microblog\app\templates\user.html", line 10, in block 'app_content'
+    {% if user.last_seen %}<p>Last seen on: {{ moment(user.last.seen).format('LLL') }}</p>{% endif %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'last'
+2022-09-23 20:07:28,875 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:49]
+2022-09-23 20:54:52,573 INFO: Microblog startup [in C:\Users\cce\project\microblog\app\__init__.py:54]
+2022-09-23 20:54:55,393 ERROR: Exception on / [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\app\routes.py", line 37, in index
+    return render_template ("index.html", title='Home Page', form=form,
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
+    return _render(
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\cce\project\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "C:\Users\cce\project\microblog\app\templates\index.html", line 4, in block 'app_content'
+    <h1>{{ _('Hi, %(username)s!', current_user.username) }}!</h1>
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\ext.py", line 167, in _gettext_alias
+    return __context.call(__context.resolve("gettext"), *args, **kwargs)
+TypeError: _make_new_gettext.<locals>.gettext() takes 2 positional arguments but 3 were given
+2022-09-23 20:54:59,426 ERROR: Exception on /index [GET] [in C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "C:\Users\cce\project\microblog\app\routes.py", line 37, in index
+    return render_template ("index.html", title='Home Page', form=form,
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
+    return _render(
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\cce\project\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Users\cce\project\microblog\app\templates\base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "C:\Users\cce\project\microblog\app\templates\index.html", line 4, in block 'app_content'
+    <h1>{{ _('Hi, %(username)s!', current_user.username) }}!</h1>
+  File "C:\Users\cce\project\microblog\venv\lib\site-packages\jinja2\ext.py", line 167, in _gettext_alias
+    return __context.call(__context.resolve("gettext"), *args, **kwargs)
+TypeError: _make_new_gettext.<locals>.gettext() takes 2 positional arguments but 3 were given
